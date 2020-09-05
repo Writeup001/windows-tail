@@ -15,7 +15,7 @@ def parse_args():
     args = parser.parse_args()
     path = args.path
     follow = args.follow
-    
+
     return path,follow
 
 # While True 不够优雅的退出方案
@@ -54,7 +54,7 @@ def follow_file(file_path):
         follow_file(file_path)
 
 if __name__ == "__main__":
-    follow,path = parse_args()
+    path,follow = parse_args()
     file_path = path
     if file_path:
         if follow:
