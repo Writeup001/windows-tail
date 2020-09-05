@@ -1,8 +1,11 @@
-#coding=utf-8
+# !/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import os
 import time
 import argparse
-import signal,sys
-import os
+import signal
+
 
 
 
