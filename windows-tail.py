@@ -6,20 +6,19 @@ import time
 import argparse
 import signal
 
-
-
-
+# 命令行参数
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-f",'--follow', help="持续输出",action='store_true')
     parser.add_argument('path', help="日志文件路径")
+    parser.add_argument("-f",'--follow', help="持续输出新增内容",action='store_true')
+    
     args = parser.parse_args()
-    follow = args.follow
     path = args.path
+    follow = args.follow
+    
+    return path,follow
 
-    return follow,path
-
-# 退出
+# While True 不够优雅的退出方案
 def os_quit(signum, frame):
     os._exit(0)
 
